@@ -32,7 +32,7 @@ pipeline {
 		image_map_store = 'docker-tag-store-df17-demo'
 	    }
             steps {
-                sh "docker run --pull --rm -e git_api_token -e git_api_url \
+                sh "docker pull salesforce/dockerfile-image-update && docker run --rm -e git_api_token -e git_api_url \
 			salesforce/dockerfile-image-update --org afalko \
 			parent afalko/alpine-python ${BUILD_ID} ${image_map_store}"
             }
