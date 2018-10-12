@@ -1,4 +1,4 @@
-FROM afalko/alpine:53
+FROM afalko/alpine:54
 
 RUN apk update && apk add python3
 RUN ln -s /usr/bin/python3 /usr/bin/python
