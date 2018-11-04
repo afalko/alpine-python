@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('Publish') {
-	    environment { 
+            environment { 
                 DOCKER_PASSWORD = credentials('DOCKER_PASSWORD') 
             }
             when {
